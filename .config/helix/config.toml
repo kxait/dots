@@ -1,0 +1,34 @@
+theme = "dark_plus"
+ 
+[editor]
+true-color = true
+line-number = "relative"
+color-modes = true
+cursorline = true
+bufferline = "multiple"
+
+[editor.file-picker]
+hidden = false
+ 
+[editor.soft-wrap]
+enable = true
+ 
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = []
+right = ["diagnostics", "position", "file-type", "file-encoding", "version-control"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+ 
+[editor.cursor-shape]
+insert="bar"
+ 
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
