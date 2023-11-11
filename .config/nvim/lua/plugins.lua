@@ -1,27 +1,6 @@
 return {
-  { "folke/tokyonight.nvim",            as = "tokyonight", config = function() vim.cmd("colorscheme tokyonight") end },
-  {
-    "martinsione/darkplus.nvim",
-    as = "darkplus",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd("colorscheme darkplus")
-    end
-  },
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    init = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-    end,
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  },
+  { 'rose-pine/neovim',                 name = 'rose-pine', config = function() vim.cmd.colorscheme("rose-pine") end },
+  { 'nvim-lualine/lualine.nvim' },
   { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },

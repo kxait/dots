@@ -128,5 +128,6 @@ if ! shopt -oq posix; then
 fi
 
 
-eval "$(zellij setup --generate-auto-start bash)"
-
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
