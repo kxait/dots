@@ -126,11 +126,14 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export TERM=xterm
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+  exec tmux -2
 fi
-
+#[[ $TERM != screen ]] && exec tmux -2
 
 alias gs="git status"
 alias ga="git add"
@@ -139,3 +142,5 @@ alias gco="git checkout"
 alias gm="git merge"
 alias grb="git rebase"
 alias gr="git restore"
+
+[[ $TMUX != "" ]] && export TERM="screen-256color"

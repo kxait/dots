@@ -1,7 +1,15 @@
 return {
-  { 'rose-pine/neovim',                 name = 'rose-pine', config = function() vim.cmd.colorscheme("rose-pine") end },
+  { 'rose-pine/neovim',         name = 'rose-pine', config = function() vim.cmd.colorscheme("rose-pine") end },
   { 'nvim-lualine/lualine.nvim' },
   { 'williamboman/mason.nvim' },
+  {
+    'stevearc/conform.nvim',
+    opts = {},
+  },
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+  },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
   { 'neovim/nvim-lspconfig' },

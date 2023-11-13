@@ -17,37 +17,15 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end, opts)
   vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts)
   vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
-  vim.api.nvim_create_user_command("Format", function() vim.lsp.buf.format() end, {})
   vim.keymap.set("n", "<leader>a", function() vim.lsp.buf.code_action() end, opts)
   vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>r", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
---[[
---
---
---
---
-    ◍ tailwindcss-language-server tailwindcss (keywords: css)
-    ◍ typescript-language-server tsserver (keywords: typescript, javascript)
-    ◍ lua-language-server lua_ls (keywords: lua)
-    ◍ helm-ls helm_ls (keywords: helm)
-    ◍ graphql-language-service-cli graphql (keywords: graphql)
-    ◍ terraform-ls terraformls (keywords: terraform)
-    ◍ prettier (keywords: angular, css, flow, graphql, html, json, jsx, javascript, less, markdown, scss, typescript, vue, yaml)
-    ◍ jkonlint (keywords: json)
-    ◍ css-lsp cssls (keywords: css, scss, less)
-    ◍ gopls (keywords: go)
-    ◍ html-lsp html (keywords: html)
-    ◍ json-lsp jsonls (keywords: json)
-    ◍ rust-analyzer rust_analyzer (keywords: rust)
---
---]]
-
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'tsserver', 'rust_analyzer' },
+  ensure_installed = { 'tsserver', 'tflint', 'rust_analyzer', "tailwindcss", "lua_ls", "helm_ls", "terraformls", "gopls", "html", "jsonls", "graphql" },
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
