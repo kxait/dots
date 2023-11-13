@@ -127,7 +127,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
+
+
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gco="git checkout"
+alias gm="git merge"
+alias grb="git rebase"
+alias gr="git restore"
