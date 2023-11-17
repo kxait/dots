@@ -130,9 +130,9 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export TERM=xterm
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux -2
-fi
+#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  exec tmux -2
+#fi
 #[[ $TERM != screen ]] && exec tmux -2
 
 alias gs="git status"

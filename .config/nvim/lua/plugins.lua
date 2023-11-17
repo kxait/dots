@@ -6,9 +6,13 @@ return {
     'stevearc/conform.nvim',
     opts = {},
   },
+  { 'm4xshen/autoclose.nvim' },
+  { 'NMAC427/guess-indent.nvim' },
   {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
+    "j-hui/fidget.nvim",
+    opts = {
+      -- options
+    },
   },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
