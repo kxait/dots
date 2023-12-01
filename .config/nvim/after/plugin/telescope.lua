@@ -9,7 +9,7 @@ vim.keymap.set('n', '<leader>S', function()
    builtin.lsp_workspace_symbols({ query = search })
 end, {})
 vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
--- this doesnt work, dunno why
+-- remember to install ripgrep
 vim.keymap.set('n', '<leader>/', function()
    local search = vim.fn.input("Grep > ")
    if search == "" then return end

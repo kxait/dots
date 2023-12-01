@@ -1,4 +1,6 @@
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export GOPATH="${HOME}/go"
+
+export PATH="$GOPATH/bin:/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 alias src="cd ~/src"
 
@@ -16,4 +18,7 @@ setopt PROMPT_SUBST
 PROMPT='%B%F{046}%n %F{033}%~ %F{160}${vcs_info_msg_0_}%f%b$ '
 eval $(/opt/homebrew/bin/brew shellenv)
 
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

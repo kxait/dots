@@ -25,7 +25,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'tflint', 'rust_analyzer', "lua_ls", "helm_ls", "terraformls", "gopls", "html", "jsonls", "graphql" },
+  ensure_installed = { 'tflint', "lua_ls", "helm_ls", "terraformls", "gopls", "html", "jsonls", "graphql", "vtsls" },
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
@@ -37,6 +37,12 @@ require('mason-lspconfig').setup({
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
+vim.filetype.add({
+  extension = {
+    templ = "templ"
+  }
+})
 
 cmp.setup({
   sources = {
@@ -53,5 +59,25 @@ cmp.setup({
     ['<Up>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-x>'] = cmp.mapping.complete(),
+    ['<C-d>'] = cmp.mapping.scroll_docs(4),
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
   }),
+})
+
+-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  })
 })
