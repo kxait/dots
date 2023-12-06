@@ -19,6 +19,6 @@ PROMPT='%B%F{046}%n %F{033}%~ %F{160}${vcs_info_msg_0_}%f%b$ '
 eval $(/opt/homebrew/bin/brew shellenv)
 
 
+alias ts="~/.config/scripts/tmux-sessionizer.sh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-

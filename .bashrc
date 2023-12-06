@@ -142,5 +142,8 @@ alias gco="git checkout"
 alias gm="git merge"
 alias grb="git rebase"
 alias gr="git restore"
+alias ts="~/.config/scripts/tmux-sessionizer.sh"
 
 [[ $TMUX != "" ]] && export TERM="screen-256color"
+
+alias ts="~/.config/scripts/tmux-sessionizer.sh"
