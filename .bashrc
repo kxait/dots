@@ -144,6 +144,16 @@ alias grb="git rebase"
 alias gr="git restore"
 alias ts="~/.config/scripts/tmux-sessionizer.sh"
 
+export EDITOR=nvim
+
 [[ $TMUX != "" ]] && export TERM="screen-256color"
 
 alias ts="~/.config/scripts/tmux-sessionizer.sh"
+
+# pnpm
+export PNPM_HOME="/home/tomasz/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
