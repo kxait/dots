@@ -6,7 +6,7 @@ return {
     'stevearc/conform.nvim',
     opts = {},
   },
-  { 'm4xshen/autoclose.nvim' },
+  --{'m4xshen/autoclose.nvim' },
   { 'NMAC427/guess-indent.nvim' },
   {
     "j-hui/fidget.nvim",
