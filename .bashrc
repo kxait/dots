@@ -150,6 +150,8 @@ export EDITOR=nvim
 
 alias ts="~/.config/scripts/tmux-sessionizer.sh"
 
+export GOPATH="${HOME}/go"
+export PATH="$GOPATH/bin:$PATH"
 # pnpm
 export PNPM_HOME="/home/tomasz/.local/share/pnpm"
 case ":$PATH:" in
