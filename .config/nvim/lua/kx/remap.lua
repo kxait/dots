@@ -45,3 +45,12 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 --vim.keymap.set("n", "<C-u>", "<C-u>zz")
 --vim.keymap.set("n", "n", "nzzzv")
 --vim.keymap.set("n", "N", "Nzzzv")
+--
+
+vim.api.nvim_create_user_command("Sch", function(args)
+   args = args.args
+   local git_files = vim.fn.systemlist('git ls-files')
+   vim.cmd([[noautocmd vimgrep /]] ..
+      args .. "/gj" .. table.concat(vim.tbl_map(vim.fn.expand, git_files), " "))
+   vim.cmd("copen")
+end, { nargs = "?" })
