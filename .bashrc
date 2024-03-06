@@ -152,6 +152,10 @@ alias ts="~/.config/scripts/tmux-sessionizer.sh"
 
 export GOPATH="${HOME}/go"
 export PATH="$GOPATH/bin:$PATH"
+export PATH="${HOME}/.cargo/bin:$PATH"
+
+alias blahaj='display3d ~/.config/blahaj.obj -t 0,0,5.5'
+
 # pnpm
 export PNPM_HOME="/home/tomasz/.local/share/pnpm"
 case ":$PATH:" in
