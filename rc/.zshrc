@@ -24,3 +24,5 @@ alias ts="~/.config/scripts/tmux-sessionizer.sh"
 alias blahaj="display3d ~/.config/blahaj.obj -t 0,0,5.5"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+. ~/.profile
