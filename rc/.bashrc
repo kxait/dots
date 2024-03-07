@@ -114,4 +114,29 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# get current branch in git repo
+function parse_git_branch() {
+	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+	if [ ! "${BRANCH}" == "" ]
+	then
+		STAT=`parse_git_dirty`
+		echo "[${BRANCH}${STAT}]"
+	else
+		echo ""
+	fi
+}
+
+# get current branch in git repo
+function parse_git_branch() {
+	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+	if [ ! "${BRANCH}" == "" ]
+	then
+		echo "${BRANCH}"
+	else
+		echo ""
+	fi
+}
+
+export PS1="\[\e[32m\]\u\[\e[m\] \[\e[36m\]\w\[\e[m\] \[\e[33m\]\`parse_git_branch\`\[\e[m\]$"
+
 . ~/.profile
