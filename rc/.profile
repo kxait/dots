@@ -45,6 +45,8 @@ alias ts="~/.config/scripts/tmux-sessionizer.sh"
 export GOPATH="${HOME}/go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="${HOME}/.cargo/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="/usr/local/lib/nodejs/node-v20.11.1-linux-x64/bin:$PATH"
 
 alias blahaj='display3d ~/.config/blahaj.obj -t 0,0,5.5'
 
