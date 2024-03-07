@@ -120,7 +120,7 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		STAT=`parse_git_dirty`
-		echo "[${BRANCH}${STAT}]"
+		echo "[${BRANCH}${STAT}] "
 	else
 		echo ""
 	fi
@@ -131,12 +131,12 @@ function parse_git_branch() {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 	if [ ! "${BRANCH}" == "" ]
 	then
-		echo "${BRANCH}"
+		echo "${BRANCH} "
 	else
 		echo ""
 	fi
 }
 
-export PS1="\[\e[32m\]\u\[\e[m\] \[\e[36m\]\w\[\e[m\] \[\e[33m\]\`parse_git_branch\`\[\e[m\]$"
+export PS1="\[\e[32m\]\u\[\e[m\] \[\e[36m\]\w\[\e[m\] \[\e[33m\]\`parse_git_branch\`\[\e[m\]"
 
 . ~/.profile
