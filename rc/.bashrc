@@ -111,6 +111,7 @@ aldi="cd ~/src/aldinord-bco-microservices"
                                            
 gs="git status"
 ga="git add"
+gc="git commit"
 gap="git add -p"
 gd="git diff"
 ts="~/.config/scripts/tmux-sessionizer.sh"

@@ -2,6 +2,7 @@ alias src="cd ~/src"
 alias aldi="cd ~/src/aldinord-bco-microservices"
 
 alias gs="git status"
+alias gc="git commit"
 alias ga="git add"
 alias gap="git add -p"
 alias gd="git diff"
