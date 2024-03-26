@@ -10,6 +10,9 @@ alias grb="git rebase"
 alias gr="git restore"
 alias ts="~/.config/scripts/tmux-sessionizer.sh"
 
+alias ibt="pnpm i && pnpm build && pnpm test"
+alias ib="pnpm i && pnpm test"
+
 export EDITOR=nvim
 
 [[ $TMUX != "" ]] && export TERM="screen-256color"

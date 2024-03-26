@@ -36,7 +36,7 @@ return {
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-        ensure_installed = { "terraform", "c", "go", "lua", "vim", "javascript", "html", "typescript" },
+        ensure_installed = { "terraform", "c", "go", "lua", "vim", "javascript", "html", "typescript", "graphql" },
         sync_install = false,
         highlight = { enable = true },
         indent = { enable = true },
