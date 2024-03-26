@@ -108,16 +108,13 @@ export PS1="\[\e[32m\]\u\[\e[m\] \[\e[36m\]\w\[\e[m\] \[\e[33m\]\`parse_git_bran
 cat << EOF
 src="cd ~/src"
 aldi="cd ~/src/aldinord-bco-microservices"
-
+                                           
 gs="git status"
 ga="git add"
-gc="git commit"
-gco="git checkout"
-gm="git merge"
-grb="git rebase"
-gr="git restore"
+gap="git add -p"
+gd="git diff"
 ts="~/.config/scripts/tmux-sessionizer.sh"
-
+                                           
 ibt="pnpm i && pnpm build && pnpm test"
 ib="pnpm i && pnpm test"
 EOF

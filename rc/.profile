@@ -3,11 +3,8 @@ alias aldi="cd ~/src/aldinord-bco-microservices"
 
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit"
-alias gco="git checkout"
-alias gm="git merge"
-alias grb="git rebase"
-alias gr="git restore"
+alias gap="git add -p"
+alias gd="git diff"
 alias ts="~/.config/scripts/tmux-sessionizer.sh"
 
 alias ibt="pnpm i && pnpm build && pnpm test"
