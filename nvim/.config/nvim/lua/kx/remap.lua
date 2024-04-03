@@ -30,22 +30,16 @@ vim.api.nvim_create_user_command("Wbd", function()
    vim.cmd.bdelete()
 end, {})
 
-vim.keymap.set("i", "<C-BS>", "<Esc>cvb", {})
-vim.keymap.set("n", "<C-cr>", "ciw")
+vim.api.nvim_create_user_command("Bda", function() vim.cmd("bufdo! bd!") end, {})
 
+-- sometimes <C-v> triggers something else in some terminals ;)
 vim.keymap.set("n", "<leader>v", "<C-v>")
 
 vim.keymap.set("n", "<leader>*", ":set hlsearch<CR>*")
-vim.keymap.set("n", "<Esc>", ":noh<CR>")
+--vim.keymap.set("n", "<Esc>", ":noh<CR>")
 
--- prime said i need these
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
---vim.keymap.set("n", "<C-d>", "<C-d>zz")
---vim.keymap.set("n", "<C-u>", "<C-u>zz")
---vim.keymap.set("n", "n", "nzzzv")
---vim.keymap.set("n", "N", "Nzzzv")
---
 
 vim.api.nvim_create_user_command("Sch", function(args)
    args = args.args
