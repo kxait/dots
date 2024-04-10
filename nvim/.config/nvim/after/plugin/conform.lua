@@ -6,6 +6,7 @@ conform.setup({
     typescript = { "prettier" },
     javascriptreact = { "prettier" },
     typescriptreact = { "prettier" },
+    graphql = { "prettier" },
     cpp = { "clang-format" },
     go = { "gofmt" }
   },
