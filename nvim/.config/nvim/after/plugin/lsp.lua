@@ -35,6 +35,15 @@ require('mason-lspconfig').setup({
   }
 })
 
+require("lspconfig").jsonls.setup {
+  settings = {
+    json = {
+      schemas = require("schemastore").json.schemas(),
+      validate = { enable = true },
+    }
+  }
+}
+
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 

@@ -1,34 +1,16 @@
 return {
-  { 'rose-pine/neovim',         name = 'rose-pine', config = function() vim.cmd.colorscheme("rose-pine") end },
-  { 'nvim-lualine/lualine.nvim' },
+  -- themes
+  { 'rose-pine/neovim',                 name = 'rose-pine',  config = function() vim.cmd.colorscheme("rose-pine") end },
+  { 'projekt0n/github-nvim-theme' },
+  { "catppuccin/nvim",                  name = "catppuccin", },
+  { "sainnhe/edge",                     name = "edge-theme" },
+
+  -- LSP
   { 'williamboman/mason.nvim' },
-  {
-    'stevearc/conform.nvim',
-    opts = {},
-  },
-  --{'m4xshen/autoclose.nvim' },
-  { 'NMAC427/guess-indent.nvim' },
-  {
-    "j-hui/fidget.nvim",
-    opts = {
-      -- options
-    },
-  },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
   { 'neovim/nvim-lspconfig' },
   { 'hrsh7th/cmp-nvim-lsp' },
-  {
-    'theprimeagen/harpoon',
-    config = function()
-      local harpoon = require("harpoon");
-      harpoon.setup({
-        tabline = true
-      })
-    end
-  },
-  { 'hrsh7th/nvim-cmp' },
-  { 'L3MON4D3/LuaSnip' },
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -43,11 +25,39 @@ return {
       })
     end
   },
+  "b0o/schemastore.nvim",
+  -- formatter
+  {
+    'stevearc/conform.nvim',
+    opts = {},
+  },
+  { 'nvim-lualine/lualine.nvim' },
+  { 'NMAC427/guess-indent.nvim' },
+  {
+    "j-hui/fidget.nvim",
+    opts = {
+      -- options
+    },
+  },
+  {
+    'theprimeagen/harpoon',
+    config = function()
+      local harpoon = require("harpoon");
+      harpoon.setup({
+        tabline = true
+      })
+    end
+  },
+  { 'hrsh7th/nvim-cmp' },
+  { 'L3MON4D3/LuaSnip' },
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
+
+  -- must have
   "mbbill/undotree",
+  -- git
   "tpope/vim-fugitive"
 }
