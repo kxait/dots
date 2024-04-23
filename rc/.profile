@@ -11,6 +11,9 @@ alias ts="~/.config/scripts/tmux-sessionizer.sh"
 alias ibt="pnpm i && pnpm build && pnpm test"
 alias ib="pnpm i && pnpm test"
 
+alias light="gsettings set org.gnome.desktop.interface color-scheme prefer-light"
+alias dark="gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
+
 export EDITOR=nvim
 
 [[ $TMUX != "" ]] && export TERM="screen-256color"

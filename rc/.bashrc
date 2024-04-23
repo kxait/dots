@@ -119,3 +119,5 @@ ts="~/.config/scripts/tmux-sessionizer.sh"
 ibt="pnpm i && pnpm build && pnpm test"
 ib="pnpm i && pnpm test"
 EOF
+
+export LOG_PRETTY=true

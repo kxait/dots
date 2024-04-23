@@ -18,6 +18,17 @@ vim.keymap.set("n", "<leader>P", [["+P]])
 --    vim.lsp.buf.format()
 --    vim.cmd.write()
 -- end)
+--vim.keymap.set("n", "<Left>", vim.cmd.bprev)
+--vim.keymap.set("n", "<Right>", vim.cmd.bnext)
+
+--vim.api.nvim_create_user_command("Reload", function() vim.cmd.e() end, {})
+--vim.api.nvim_create_user_command("ReloadAll", function() vim.cmd("bufdo! e") end, {})
+
+--vim.api.nvim_create_user_command("Wbd", function()
+--   vim.lsp.buf.format()
+--   vim.cmd.write()
+--   vim.cmd.bdelete()
+--end, {})
 
 vim.api.nvim_create_user_command("Bda", function() vim.cmd("bufdo! bd!") end, {})
 
