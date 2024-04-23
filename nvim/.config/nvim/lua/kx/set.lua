@@ -31,5 +31,5 @@ vim.g.netrw_winsize = "17"          -- 17% size
 vim.g.netrw_banner = "0"            -- hide banner
 vim.g.netrw_localmkdir = "mkdir -p" -- change mkdir cmd
 vim.g.netrw_localcopycmd = "cp -r"  -- change copy command
-vim.g.netrw_localrmdir = "rm -r"    -- change delete command
+vim.g.netrw_localrmdir = "rm -rf"   -- change delete command
 vim.g.netrw_list_hide = [['\(^\|\s\s\)\zs\.\S\+']]
