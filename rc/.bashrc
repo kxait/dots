@@ -114,6 +114,7 @@ ga="git add"
 gc="git commit"
 gap="git add -p"
 gd="git diff"
+glo="git log --oneline"
 ts="~/.config/scripts/tmux-sessionizer.sh"
                                            
 ibt="pnpm i && pnpm build && pnpm test"
