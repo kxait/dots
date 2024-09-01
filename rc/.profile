@@ -31,4 +31,5 @@ if [ -d "${HOME}/.local/kitty.app" ]; then
 fi
 
 alias blahaj='display3d ~/.config/blahaj.obj -t 0,0,5.5'
+alias blahajmini='display3d ~/.config/blahaj.obj -t 0,0,10.5'
 

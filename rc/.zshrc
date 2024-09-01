@@ -1,6 +1,7 @@
 export GOPATH="${HOME}/go"
 
 export PATH="$GOPATH/bin:/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="$PATH:/Users/kx/bin"
 export EDITOR=nvim
 
 alias src="cd ~/src"
@@ -26,3 +27,7 @@ alias blahaj="display3d ~/.config/blahaj.obj -t 0,0,5.5"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 . ~/.profile
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
