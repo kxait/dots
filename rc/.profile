@@ -10,7 +10,7 @@ alias glo="git log --oneline"
 alias ts="~/.config/scripts/tmux-sessionizer.sh"
 
 alias ibt="pnpm i && pnpm build && pnpm test"
-alias ib="pnpm i && pnpm test"
+alias ib="pnpm i && pnpm build"
 
 alias light="gsettings set org.gnome.desktop.interface color-scheme prefer-light"
 alias dark="gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
