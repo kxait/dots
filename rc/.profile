@@ -7,6 +7,8 @@ alias ga="git add"
 alias gap="git add -p"
 alias gd="git diff"
 alias glo="git log --oneline"
+alias gp="git push"
+alias gpf="git push --force-with-lease"
 alias ts="~/.config/scripts/tmux-sessionizer.sh"
 
 alias ibt="pnpm i && pnpm build && pnpm test"

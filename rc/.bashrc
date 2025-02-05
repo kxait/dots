@@ -105,6 +105,8 @@ export PS1="\[\e[32m\]\u\[\e[m\] \[\e[36m\]\w\[\e[m\] \[\e[33m\]\`parse_git_bran
 
 . ~/.profile
 
+alias schlafen="sudo systemctl hybrid-sleep"
+
 cat << EOF
 src="cd ~/src"
 aldi="cd ~/src/aldinord-bco-microservices"
@@ -115,10 +117,13 @@ gc="git commit"
 gap="git add -p"
 gd="git diff"
 glo="git log --oneline"
+gp="git push"
+gpf="git push --force-with-lease"
 ts="~/.config/scripts/tmux-sessionizer.sh"
                                            
 ibt="pnpm i && pnpm build && pnpm test"
 ib="pnpm i && pnpm test"
+schlafen="systemctl hybrid-sleep"
 EOF
 
 export LOG_PRETTY=true

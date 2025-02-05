@@ -8,7 +8,8 @@ conform.setup({
     typescriptreact = { "prettier" },
     graphql = { "prettier" },
     cpp = { "clang-format" },
-    go = { "gofmt" }
+    go = { "gofmt" },
+    terraform = { "terraform_fmt" }
   },
   format_on_save = function(bufnr)
     -- Disable with a global or buffer-local variable
