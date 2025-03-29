@@ -10,6 +10,7 @@ alias glo="git log --oneline"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
 alias ts="~/.config/scripts/tmux-sessionizer.sh"
+alias gb="~/.config/scripts/git-branch.sh"
 
 alias ibt="pnpm i && pnpm build && pnpm test"
 alias ib="pnpm i && pnpm build"
@@ -27,7 +28,6 @@ export GOPATH="${HOME}/go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="${HOME}/.cargo/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
-export PATH="/usr/local/lib/nodejs/node-v20.11.1-linux-x64/bin:$PATH"
 if [ -d "${HOME}/.local/kitty.app" ]; then
   export PATH="${HOME}/.local/kitty.app/bin:$PATH"
 fi

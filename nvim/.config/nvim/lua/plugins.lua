@@ -55,6 +55,15 @@ return {
     tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
+  { 'akinsho/git-conflict.nvim', version = "*", config = true },
+
+  -- ai
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({})
+    end,
+  },
 
   -- must have
   "mbbill/undotree",
