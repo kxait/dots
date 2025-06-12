@@ -27,6 +27,7 @@ alias ts="~/.config/scripts/tmux-sessionizer.sh"
 export GOPATH="${HOME}/go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="${HOME}/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
 if [ -d "${HOME}/.local/kitty.app" ]; then
   export PATH="${HOME}/.local/kitty.app/bin:$PATH"

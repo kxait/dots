@@ -1,9 +1,6 @@
 return {
   -- themes
-  { 'rose-pine/neovim',                 name = 'rose-pine',  config = function() vim.cmd.colorscheme("rose-pine") end },
-  { 'projekt0n/github-nvim-theme' },
-  { "catppuccin/nvim",                  name = "catppuccin", },
-  { "sainnhe/edge",                     name = "edge-theme" },
+  { 'rose-pine/neovim',                 name = 'rose-pine', config = function() vim.cmd.colorscheme("rose-pine") end },
 
   -- LSP
   { 'williamboman/mason.nvim' },
@@ -18,7 +15,7 @@ return {
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-        ensure_installed = { "terraform", "c", "go", "lua", "vim", "javascript", "html", "typescript", "graphql" },
+        ensure_installed = { "terraform", "c", "go", "lua", "vim", "javascript", "html", "typescript", "graphql", "yaml" },
         sync_install = false,
         highlight = { enable = true },
         indent = { enable = true },
@@ -32,7 +29,12 @@ return {
     opts = {},
   },
   { 'nvim-lualine/lualine.nvim' },
-  { 'NMAC427/guess-indent.nvim' },
+  {
+    'NMAC427/guess-indent.nvim',
+    config = function()
+      require('guess-indent').setup({})
+    end
+  },
   {
     "j-hui/fidget.nvim",
     opts = {
@@ -49,13 +51,21 @@ return {
     end
   },
   { 'hrsh7th/nvim-cmp' },
-  { 'L3MON4D3/LuaSnip' },
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  { 'akinsho/git-conflict.nvim', version = "*", config = true },
+  { 'akinsho/git-conflict.nvim',  version = "*", config = true },
+
+  -- snips
+  {
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!).
+    build = "make install_jsregexp"
+  },
 
   -- ai
   {
@@ -65,5 +75,8 @@ return {
   -- must have
   "mbbill/undotree",
   -- git
-  "tpope/vim-fugitive"
+  "tpope/vim-fugitive",
+  -- filetree
+  { "nvim-tree/nvim-tree.lua" },
+  { "nvim-tree/nvim-web-devicons" },
 }

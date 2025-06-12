@@ -1,7 +1,9 @@
 vim.g.mapleader = " "
 
 
-vim.keymap.set("n", "<leader>ft", vim.cmd.Ex)
+--vim.keymap.set("n", "<leader>ft", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>fy", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>ft", ":NvimTreeFocus<CR>")
 
 -- helix compatibility
 --vim.keymap.set({ "v", "n" }, "gh", "^")

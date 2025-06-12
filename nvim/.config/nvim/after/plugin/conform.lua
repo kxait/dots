@@ -9,7 +9,8 @@ conform.setup({
     graphql = { "prettier" },
     cpp = { "clang-format" },
     go = { "gofmt" },
-    terraform = { "terraform_fmt" }
+    terraform = { "terraform_fmt" },
+    html = { "prettier" },
   },
   format_on_save = function(bufnr)
     -- Disable with a global or buffer-local variable
