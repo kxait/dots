@@ -56,7 +56,7 @@ return {
     tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  { 'akinsho/git-conflict.nvim',  version = "*", config = true },
+  { 'akinsho/git-conflict.nvim', version = "*", config = true },
 
   -- snips
   {
@@ -76,7 +76,4 @@ return {
   "mbbill/undotree",
   -- git
   "tpope/vim-fugitive",
-  -- filetree
-  { "nvim-tree/nvim-tree.lua" },
-  { "nvim-tree/nvim-web-devicons" },
 }
