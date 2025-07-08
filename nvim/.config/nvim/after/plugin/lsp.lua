@@ -25,7 +25,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { "lua_ls", "gopls", "html", "jsonls", "vtsls" },
+  ensure_installed = { "lua_ls", "gopls", "html", "jsonls", "vtsls", "terraformls" },
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
@@ -50,7 +50,8 @@ local cmp_select = { behavior = cmp.SelectBehavior.Select }
 vim.filetype.add({
   extension = {
     templ = "templ",
-    ['terraform-vars'] = "tf"
+    ['terraform-vars'] = "tf",
+    ['terraform'] = "tf",
   }
 })
 

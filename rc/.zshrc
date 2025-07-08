@@ -2,6 +2,7 @@ export GOPATH="${HOME}/go"
 
 export PATH="$GOPATH/bin:/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="$PATH:/Users/kx/bin"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export EDITOR=nvim
 
 alias src="cd ~/src"
